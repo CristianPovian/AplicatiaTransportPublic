@@ -1,0 +1,10 @@
+<html>
+<body>
+<div class="welcome">
+    Bine ati venit pe pagina principala, alegeți tipul de transport public
+</div>
+<div *ngFor="let type of transportTypeArray">
+    <button  class="button" (click)="inspectType(type.value)">{{ type.label }}</button>
+</div>
+</body>
+</html>

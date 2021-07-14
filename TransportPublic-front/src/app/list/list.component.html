@@ -1,0 +1,24 @@
+<body>
+<div>
+    <div class="back">
+        <div>
+            <button (click)="navigateBack()"> BACK </button>
+        </div>
+        <div class="msg">
+            {{ message() }}
+        </div>
+    </div>
+
+
+    <div *ngIf="types.length !== 0" style="margin-top: 10px">
+        <div *ngFor="let type of types">
+            <button class="button" *ngIf="!lastData" (click)="inspect(type)">{{ type }}</button>
+            <h2 *ngIf="lastData">{{ type }}</h2>
+        </div>
+
+    </div>
+    <div class="mess">
+        <h2 *ngIf="types.length === 0">Nu exista sosiri pentru urmatoarele 2 ore</h2>
+    </div>
+</div>
+</body>
